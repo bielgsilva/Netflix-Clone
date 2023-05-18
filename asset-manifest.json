@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Clone-Netflix/static/css/main.6dd84bf0.css",
+    "main.js": "/Clone-Netflix/static/js/main.d5ebce91.js",
+    "static/media/peaky-blinders.png": "/Clone-Netflix/static/media/peaky-blinders.b847fc7ad04293b5db88.png",
+    "static/media/netflix-logo.png": "/Clone-Netflix/static/media/netflix-logo.893e75f16bfa595cd8a2.png",
+    "index.html": "/Clone-Netflix/index.html",
+    "main.6dd84bf0.css.map": "/Clone-Netflix/static/css/main.6dd84bf0.css.map",
+    "main.d5ebce91.js.map": "/Clone-Netflix/static/js/main.d5ebce91.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6dd84bf0.css",
+    "static/js/main.d5ebce91.js"
+  ]
+}
