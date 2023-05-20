@@ -7,7 +7,7 @@ Este projeto é um Clone da plataforma do Netflix em REACT que possui recursos c
 4. <a href='#tec'>Tecnologias Utilizadas</a><br>
 
 ## <h2 id='visuProjeto'>Como Visualizar o Projeto</h2>
-Para apenas visualizar o projeto, clique nesse link a seguir: <a href='https://bielgsilva.github.io/Clone-Netflix/'> AQUI </a>
+Para apenas visualizar o projeto, clique nesse link a seguir: <a href='https://bielgsilva.github.io/Netflix-Clone/'> AQUI </a>
 
 ## <h2 id='execProjeto'>Como Executar o Projeto</h2>
 Para executar este projeto, siga os seguintes passos no Prompt de Comando:
