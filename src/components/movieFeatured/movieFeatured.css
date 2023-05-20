@@ -122,3 +122,35 @@
         color: white;
     }
 }
+
+@media (max-width: 1100px) {
+        .container {
+        height: auto;
+        padding: 10vh 5vw;
+    }
+    
+    .container-degrade-vertical {
+        background: none;
+    }
+    
+    .container-degrade-horizontal {
+        background: none;
+        padding: 2%;
+    }
+    
+    .info {
+        width: 100%;
+        font-size: 2vw;
+    }
+    
+    .nameImage img {
+        width: 50%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .btn-play, .btn-info {
+        font-size: 1.5vw;
+    }
+}
+

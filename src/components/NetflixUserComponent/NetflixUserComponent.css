@@ -112,14 +112,26 @@
   align-items: center;
   text-align: center;
 }
+.howIs h1{
+font-size: 2em;
+}
   .netflix-user-component input,
   .netflix-user-component button {
     width: 80%;
   }
 
+.howIs input{
+  width:45%;
+}
+.howIs button{
+  width:50%;
+}
+
+
   .users-list {
     flex-wrap: wrap;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
   }
 
   .users-list img {
