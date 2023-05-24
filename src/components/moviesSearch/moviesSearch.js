@@ -1,12 +1,11 @@
 import React from 'react';
 import './moviesSearch.css';
 
-const MoviesSearch = ({ movies, setShowResults, headerRef }) => {
+const MoviesSearch = ({ movies, setShowResults }) => {
     document.body.style.overflow = 'hidden';
 
     const handleCloseModal = () => {
         document.body.style.overflow = 'auto';
-        headerRef.current.className = ''
         setShowResults(false);
     };
 

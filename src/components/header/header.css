@@ -3,7 +3,6 @@ header {
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 100;
     top: 0;
     left: 0;
     right: 0;
@@ -13,8 +12,12 @@ header {
     padding: 1vh 4vw;
     background: linear-gradient(to top, transparent, #141414);
     transition: all ease 0.5s;
+    z-index: 10;
   }
-  
+  .header-hidden {
+    display: none;
+}
+
   .scroll {
     background-color: #141414;
   }
@@ -24,7 +27,7 @@ header {
   }
   
   .logo img {
-    width: 100px;
+    width: 110px;
   }
   
   .links ul {

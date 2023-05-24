@@ -1,45 +1,23 @@
 import React, { useState } from "react";
 import "./movies.css";
 import Modal from '../modal/modal'
+import Context from "../../context/Context";
+import { useContext } from 'react';
 
 function Movies({ title, items }) {
+    const { selectedMovie, setSelectedMovie, showModal, setShowModal, genreMap } = useContext(Context)
     const [scrollX, setScrollX] = useState(0);
-    const [selectedMovie, setSelectedMovie] = useState(null);
-    const [showModal, setShowModal] = useState(false);
-    let timeoutId; 
-
-    const genreMap = {
-        12: 'Aventura',
-        16: 'Animação',
-        35: 'Comédia',
-        36: 'História',
-        37: 'Faroeste',
-        27: 'Terror',
-        10402: 'Música',
-        10749: 'Romance',
-        14: 'Fantasia',
-        878: 'Ficção Científica',
-        10770: 'Cinema TV',
-        10752: 'Guerra',
-        9648: 'Mistério',
-        99: 'Documentário',
-        10751: 'Família'
-    };
+    let timeoutId;
 
     const handleShowModal = () => {
         setShowModal(true);
     };
 
     const handleMouseEnter = (item) => {
-        clearTimeout(timeoutId); 
+        clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
             setSelectedMovie(item);
-        }, 500); 
-    };
-
-    const handleMouseLeave = () => {
-        clearTimeout(timeoutId); 
-        setSelectedMovie(null);
+        }, 200);
     };
 
     const moveLeft = () => {
@@ -78,9 +56,7 @@ function Movies({ title, items }) {
                             key={key}
                             className="movie"
                             onMouseEnter={() => handleMouseEnter(item)}
-                            onMouseLeave={() => handleMouseLeave(item)}
                         >
-
                             {selectedMovie === item && (
                                 <div
                                     className="miniModal"

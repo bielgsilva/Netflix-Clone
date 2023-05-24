@@ -1,10 +1,7 @@
 import './modal.css'
-import peakyImage from '../../assets/peaky-blinders.png'
 
 const Modal = ({ name, overview, setShowModal, backdrop }) => {
     document.body.style.overflow = 'hidden';
-
-    const containsPeaky = name.toLowerCase().includes('peaky');
 
     const handleCloseModal = () => {
         document.body.style.overflow = 'auto';
@@ -23,16 +20,11 @@ const Modal = ({ name, overview, setShowModal, backdrop }) => {
 
                 <div className="modal-content-inner">
                     <div className='poster' style={{
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundImage: `url(https://image.tmdb.org/t/p/original${backdrop})`
+                        backgroundSize: 'contain',
+                        backgroundPosition: 'top',
+                        backgroundImage: `url(https://image.tmdb.org/t/p/original${backdrop})`,
+                        backgroundRepeat: "no-repeat"
                     }}>
-                        {containsPeaky && (
-                            <div className="nameImageModal">
-                                <img src={peakyImage} alt="peakyImage" />
-                            </div>
-                        )}
-
                         <div className='overviewModal'>
                             <div className='btn-play-modal'>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24" width="28" height="24">
@@ -47,7 +39,9 @@ const Modal = ({ name, overview, setShowModal, backdrop }) => {
                     <div className='pos-post'>
                         <h2>{name}</h2>
                         <p>{overview}</p>
-                       
+                        <p>Lembrando que o projeto é apenas um Clone, não é possível assistir nenhum filme.</p>
+                        <p>Todos os direitos são revervados a Netflix.</p>
+
                     </div>
 
                 </div>

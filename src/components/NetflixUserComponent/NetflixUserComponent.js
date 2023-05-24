@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './NetflixUserComponent.css';
+import Context from "../../context/Context";
+import { useContext } from 'react';
 
-const NetflixUserComponent = ({ handleSelectUser }) => {
+
+const NetflixUserComponent = () => {
+    const { setShowNetflixUserComponent } = useContext(Context)
+    const handleSelectUser = () => {
+        setShowNetflixUserComponent(false);
+    };
+
+
     const [username, setUsername] = useState('');
     const [userList, setUserList] = useState([]);
     const [localStorageLoaded, setLocalStorageLoaded] = useState(false);

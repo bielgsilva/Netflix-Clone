@@ -5,8 +5,6 @@ import peakyImage from '../../assets/peaky-blinders.png'
 import Modal from '../modal/modal'
 
 
-
-
 const MoviesSearch = () => {
     const [peaky, setPeaky] = useState({})
     const [showModal, setShowModal] = useState(false);
