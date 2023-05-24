@@ -17,10 +17,12 @@ function Movies({ title, items }) {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => {
             setSelectedMovie(item);
-        }, 200);
+        }, 400);
     };
 
     const moveLeft = () => {
+        setSelectedMovie(null);
+
         let currentMargin = scrollX
         if (currentMargin === 0) {
             return
@@ -29,6 +31,8 @@ function Movies({ title, items }) {
     };
 
     const moveRight = () => {
+        setSelectedMovie(null);
+
         let currentMargin = scrollX
         if (currentMargin >= 3500) {
             return
@@ -64,19 +68,10 @@ function Movies({ title, items }) {
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
                                         backgroundImage: `url(https://image.tmdb.org/t/p/original${item.poster_path})`,
+                                        backgroundRepeat: 'no-repeat',
                                         position: 'relative'
                                     }}
                                 >
-                                    {showModal && selectedMovie === item && (
-                                        <Modal
-                                            name={selectedMovie.original_title}
-                                            overview={selectedMovie.overview}
-                                            setShowModal={setShowModal}
-                                            showModal={showModal}
-                                            backdrop={selectedMovie.backdrop_path}
-                                        />
-                                    )}
-
                                     <h2>{item.title}</h2>
                                     <span>Gêneros: {item.genre_ids.map(id => genreMap[id]).join(', ')}</span>
                                     <p>Nota IMDB: {item.vote_average}</p>
@@ -93,6 +88,16 @@ function Movies({ title, items }) {
                                         </svg>
                                         <span>Mais informações</span>
                                     </div>
+
+                                    {showModal && selectedMovie === item && (
+                                        <Modal
+                                            name={selectedMovie.original_title}
+                                            overview={selectedMovie.overview}
+                                            setShowModal={setShowModal}
+                                            showModal={showModal}
+                                            backdrop={selectedMovie.backdrop_path}
+                                        />
+                                    )}
                                 </div>
                             )}
 
