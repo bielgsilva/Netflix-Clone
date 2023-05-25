@@ -44,12 +44,12 @@ function Movies({ title, items }) {
         <div className="movies">
             <h2>{title}</h2>
             <div className="movieArea">
-                <div className="move-left" onClick={moveLeft}>
+                <div className={`${showModal ? 'disable' : 'move-left'}`}  onClick={moveLeft}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24" width="50" height="50">
                         <path d="M22,29.73a1,1,0,0,1-.71-.29L9.93,18.12a3,3,0,0,1,0-4.24L21.24,2.56A1,1,0,1,1,22.66,4L11.34,15.29a1,1,0,0,0,0,1.42L22.66,28a1,1,0,0,1,0,1.42A1,1,0,0,1,22,29.73Z" fill="currentColor"></path>
                     </svg>
                 </div>
-                <div className="move-right" onClick={moveRight}>
+                <div className={`${showModal ? 'disable' : 'move-right'}`} onClick={moveRight}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24" width="50" height="50">
                         <path d="M10.05,29.73a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L20.66,16.71a1,1,0,0,0,0-1.42L9.34,4a1,1,0,0,1,1.42-1.42L22.07,13.88a3,3,0,0,1,0,4.24L10.76,29.44A1,1,0,0,1,10.05,29.73Z" fill="currentColor"></path>
                     </svg>

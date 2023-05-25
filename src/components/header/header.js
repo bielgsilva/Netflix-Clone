@@ -68,6 +68,7 @@ const Header = () => {
         setOpenModalUser((prevState) => !prevState);
     };
 
+    //Troca de Usuário
     const handleUserChange = () => {
         const currentUser = localStorage.removeItem('currentUser');
         if (!currentUser) {
