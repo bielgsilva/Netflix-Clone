@@ -58,6 +58,9 @@ header {
     gap: 20px;
     cursor: pointer;
   }
+  .icon-menu{
+    width: 2.5vw;
+  }
   
   input {
     all: unset;
