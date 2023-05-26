@@ -25,9 +25,10 @@
 
     font-size: 1.2vw;
     text-shadow: 2px 2px 4px rgba(0,0,0,.45);
-    
-
-}
+    }
+    .info img{
+        width: 35vw;
+    }
 .box-btn{
     display: flex;
     gap:10px

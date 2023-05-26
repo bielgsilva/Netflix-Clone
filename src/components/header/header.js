@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useContext, useEffect } from "react";
 import api from "../../API/axios";
 import netflxLogo from '../../assets/netflix-logo.png';
 import Context from "../../context/Context";
@@ -7,28 +7,21 @@ import ModalIconMenu from "./components/ModalIconMenu/Modal-icon-menu";
 import './header.css';
 
 const Header = () => {
-    const header = useRef(null)
-
-    const { setShowNetflixUserComponent, searchInputVisible, setSearchInputVisible, search, setSearch, movies, setMovies, showResults, setShowResults, openModalUser, setOpenModalUser, showModal } = useContext(Context)
-
+    const { setShowNetflixUserComponent, searchInputVisible, setSearchInputVisible, search, setSearch, movies, setMovies, showResults, setShowResults, openModalUser, setOpenModalUser, showModal, header } = useContext(Context)
 
     //Controla a cor do Header ao scrollar a pagina
     useEffect(() => {
         const scrollPage = () => {
-            const headerElement = header.current;
-
-            if (headerElement) {
+            if (header.current) {
                 if (window.scrollY > 20) {
-                    headerElement.classList.add('scroll');
+                    header.current.classList.add('scroll');
                 } else {
-                    headerElement.classList.remove('scroll');
-                }
+                    header.current.classList.remove('scroll');
+                   }
             }
         };
-
         window.addEventListener('scroll', scrollPage);
-    }, []);
-
+    }, [header]);
 
     //Controla o Icone da Busca de Filmes
     const handleSearchIconClick = () => {
@@ -78,8 +71,7 @@ const Header = () => {
     }
 
     return (
-        <header className={`${showModal ? 'header-hidden' : ''}`} ref={header}>
-
+        <header className={`${showModal ? 'header-hidden' : 'header-trans'}`} ref={header}>
             <div className="logo">
                 <img src={netflxLogo} alt="netflix-logo" ></img>
             </div>

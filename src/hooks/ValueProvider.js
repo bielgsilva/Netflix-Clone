@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function ValuesProvider() {
     const [movieList, setMovieList] = useState([]);
@@ -12,6 +12,7 @@ export default function ValuesProvider() {
     const [showResults, setShowResults] = useState(false)
     const [openModalUser, setOpenModalUser] = useState(false)
     const [peaky, setPeaky] = useState({})
+    const header = useRef(null)
 
 
     const genreMap = {
@@ -45,6 +46,7 @@ export default function ValuesProvider() {
         showModal,
         setShowModal,
         genreMap,
+        header,
         //movies
         searchInputVisible,
         setSearchInputVisible,

@@ -1,10 +1,17 @@
 import './modal.css'
+import React, { useContext } from "react";
+
+
+import Context from "../../context/Context";
 
 const Modal = ({ name, overview, setShowModal, backdrop }) => {
     document.body.style.overflow = 'hidden';
+    const { setSelectedMovie } = useContext(Context)
+
 
     const handleCloseModal = () => {
         document.body.style.overflow = 'auto';
+        setSelectedMovie(null);
         setShowModal(false);
     };
 
@@ -19,7 +26,7 @@ const Modal = ({ name, overview, setShowModal, backdrop }) => {
 
                 <div className="modal-content-inner">
                     <div className='poster' style={{
-                        backgroundSize: 'contain',
+                        backgroundSize: 'cover',
                         backgroundPosition: 'top',
                         backgroundImage: `url(https://image.tmdb.org/t/p/original${backdrop})`,
                         backgroundRepeat: "no-repeat"
