@@ -113,7 +113,7 @@
   text-align: center;
 }
 .howIs h1{
-font-size: 2em;
+font-size: 1.5rem;
 }
   .netflix-user-component input,
   .netflix-user-component button {
@@ -121,10 +121,10 @@ font-size: 2em;
   }
 
 .howIs input{
-  width:45%;
+  width:65%;
 }
 .howIs button{
-  width:50%;
+  width:65%;
 }
 
 

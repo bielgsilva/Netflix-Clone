@@ -59,7 +59,7 @@
     color: white;
 }
 
-@media(max-width:760px){
+@media(max-width:768px){
 
     .container{
         height: 100vh;
@@ -155,3 +155,24 @@
     }
 }
 
+@media (max-width: 768px) {
+    .info {
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    
+    .nameImage img {
+        width: 80%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .btn-play, .btn-info {
+        flex-wrap: nowrap;
+        width: 50%;
+        padding: 5px 5px 5px 5px;
+        white-space: nowrap;
+
+        font-size: .8rem;
+    }
+}
